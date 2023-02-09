@@ -1,0 +1,113 @@
+@charset "UTF-8"; // 한글 주석 처리
+
+/*-- scss:defaults --*/
+$h1-font-size: 155%  !default;
+$h2-font-size: 135%  !default;
+$h3-font-size: 115%  !default;
+$h4-font-size: 100%  !default; 
+$h5-font-size: 100%  !default;
+$g6-font-size: 100%  !default;
+$figure-caption-font-size: 80% !important;
+$headings-font-weight:  600 !default;
+
+// $body-color: black !default;
+
+// Noto Sans체, 나눔고딕체, 한나체 폰트 다운로드 
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+// 소스코드용 폰트 다운로드
+@import url("https://cdn.jsdelivr.net/gh/wan2land/d2coding/d2coding-ligature-subset.css");
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'nanumgothic' !important;
+}
+
+ul, li, ol{
+    font-family: 'nanumgothic' !important;
+    font-size: 95%;
+   }
+
+p, fig-caption {
+    font-family: 'nanumgothic' !important;
+    font-size: 90%;
+    font-weight: 400; 
+}
+
+table {
+  font-family: 'nanumgothic' !important;
+  font-size: 90%;
+  font-weight: 400; 
+}
+
+.category{
+  font-family: 'nanumgothic' !important;
+  font-size: 90%;
+}
+
+.sourceCode {
+  font-family: 'D2Coding', monospace !important;
+  font-size: 95%;
+}
+
+code {
+  font-family: 'D2Coding', monospace !important;
+  font-size: 85%;
+}
+
+.math.display {
+  //font-family: 'STIX Two Math' !important; // Not working
+  font-size: 95%;
+}
+
+.math.inline {
+  font-size: 85% !important;
+}
+
+//.math.display .MathJax  {
+//  font-size: 100% !important;
+  //color: #b22222;
+//}
+
+/*
+.figure{
+    display: inline-block; 
+    margin: 0 auto;
+    border:1.5px silver solid; 
+    padding: 5px;
+    text-align: left; 
+    background:#FFFFFF;
+   }
+  
+.my-figure7 {
+    display: inline-block; 
+    margin: 0 auto;
+    //border:1.5px silver solid; 
+    padding: 5px;
+    text-align: left; 
+    width: 70%;
+    background:#FFFFFF;
+  }
+  
+.my-figure5 {
+    display: inline-block; 
+    margin: 0 auto;
+    //border:1.5px silver solid; 
+    padding: 5px;
+    text-align: left; 
+    width: 50%;
+    background:#FFFFFF;
+  }
+  
+.my-figure3 {
+    display: inline-block; 
+    margin: 0 auto;
+    //border:1.5px silver solid; 
+    padding: 5px;
+    text-align: left; 
+    width: 30%;
+    background:#FFFFFF;
+  }
+*/

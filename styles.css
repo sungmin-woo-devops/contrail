@@ -1,1 +1,8 @@
 /* css styles */
+::-moz-selection {
+  background: ffbb0f !important;
+}
+
+::selection {
+  background: ffbb0f !important;
+}

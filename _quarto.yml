@@ -1,20 +1,46 @@
 project:
   type: website
   output-dir: docs
+  
+  # 템플릿 페이지는 렌더링 제외
+  render:
+    - "*.qmd"
+    - "!template/"
+    - "!template-basic.qmd"
+  
 
 website:
-  title: "contrails"
+  title: "Project Contrails: Journey to Cloud Computing"
   navbar:
     right:
+      # 약력
       - about.qmd
       - icon: github
         href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+      - text: resume
+        # href: 나중에 Github에 추가한 이력서 경로 지정
+  page-navigation: true
+  # 바닥글 설정
+  page-footer: "Blog made by Quarto, by Sungmin Woo"
+  
 format:
   html:
-    theme: cosmo
+    theme: [flaty, theme.scss, ./styles/custom.scss]
     css: styles.css
+    
+    smooth-scroll: true
+    link-external-icon: false
+    link-external-newwindow: true
+    #link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/**'
+    citations-hover: true
+    footnotes-hover: true
+    include-in-header: meta.html
+    
+    toc: true
+    toc-depth: 3 # 차이가 어떻게 되지?
+    toc-location: left
+    
+    code-link: true
 
 editor: visual
 

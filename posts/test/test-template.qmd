@@ -1,0 +1,60 @@
+---
+title: Feature Testing
+description: A Post for feature testing
+author: "우성민"
+date: "02/10/2023"
+image: https://c4.wallpaperflare.com/wallpaper/747/484/969/artwork-fantasy-art-steampunk-room-laboratories-hd-wallpaper-preview.jpg
+categories: [test]
+toc: true
+toc-depth: 3
+#filters:
+#   - lightbox
+#lightbox: auto
+draft: true
+
+---
+
+## column-margin 
+메인 글 옆에 작은 글씨로 부연 설명을 달 수 있다.
+```.qmd
+:::{.column-margin}
+부연 설명 작성
+:::
+
+```
+
+:::{.column-margin}
+패키지 설치는 주피터 노트북에서 매직 코멘트(`%`)를 활용한다. 예를 들어 `python %pip install koreanize-matplotlib` 한 가지 주의 사항 확인하자. 루트 디렉토리에 있는 `requirements.txt`에 속지 말자. 이 녀석은 jupyterlab, jupyterlite 그리고 두 개에 필요한 요소를 설치하기 위한 파일이다. 주피터라이트 내에서 돌아가는 파이썬 패키지 설치와는 무관하다. 주피터라이트는 WASM으로 브라우저 안에서 독립적으로 구현된 IDE 환경이다.
+:::
+
+## code insert
+```python
+a = 1 + 2
+```
+
+## mermaid diagram
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round Edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+## 리스트
+
+* 해결해야 할 과제
+  1. 코드 블록 색상 변경
+  2. header 하단 마진 적당히 줄여서 본문과 균형 맞추기
+  3. header 속성 자체에 수평선 지정하기
+
+
+## Reference Curation
+* Official references
+  + Themes: https://quarto.org/docs/output-formats/html-themes.html
+  + Authoring
+    + lists: https://quarto.org/docs/authoring/markdown-basics.html#lists
+    + mermaid: https://quarto.org/docs/authoring/markdown-basics.html#diagrams
+  + Profile Configs: https://quarto.org/docs/projects/profiles.html
+
+

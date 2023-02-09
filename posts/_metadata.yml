@@ -5,4 +5,14 @@
 freeze: true
 
 # Enable banner style title blocks
-title-block-banner: true
+title-block-banner: false
+
+# 모든 블로그 포스트에 대한 작가 이름 지정
+author: "우성민"
+
+# Table of content 설정(목차 설정)
+toc: true
+toc-depth: 3
+
+# 좁다면 full도 있음
+page-layout: article
