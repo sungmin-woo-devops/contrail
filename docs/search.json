@@ -11,7 +11,14 @@
     "href": "index.html",
     "title": "Project Contrails: Journey to Cloud Computing",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 10, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "동적 볼륨 프로비저닝\n\n\n\n\n\n\n\nkubernetes\n\n\nPV\n\n\nPVC\n\n\nDynamic Volume Provisioning\n\n\n\n\n\n\n\n\n\n\n\nFeb 20, 2023\n\n\nSungmin Woo\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nFeb 10, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nFeb 7, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-2023-02-20/index.html",
+    "href": "posts/post-2023-02-20/index.html",
+    "title": "동적 볼륨 프로비저닝",
+    "section": "",
+    "text": "PV는 PVC로 요청을 받아 1대1로 결합되고, 사용된 후에는 자신의 매니페스트 파일에 정의된 회수 정책(.spec.persistentReclaimPolicy)에 따라 회수된다.\n회수된 PV는 재사용이 불가능하기에 개발자가 PV를 다시 요청한다면 사용했던 PV, PVC를 모두 제거한 후 재생성하여 사용해야 합니다. 이러한 정적 프로비저닝(static provisioning) 방식의 번거로움 때문에 동적 프로그래밍이 제시되었다.\n동적 프로비저닝은 시스템 관리자가 스토리지 기능 및 분류 정보를 담고 있는 스토리지 클래스(StorageClass) 리소스를 정의하고,\n개발자가 PVC를 요청할 때 스토리지 클래스에 의해 PV가 자동으로 프로비저닝되어 사용할 수 있도록 하였다.\n\n스토리지 클래스란?\n스토리지의 클래스(분류, 정책, 종류)에 대한 정보를 정의할 수 있는 리소스\n---\n\n\nreference\n\n[CCCR 2022 기업 멤버십 DevOPs 과정] 쿠버네티스 오케스트레이션\n\n\n\nhttps://kubernetes.io/docs/concepts/storage/dynamic-provisioning/"
   },
   {
     "objectID": "posts/post-with-code/hello.html",

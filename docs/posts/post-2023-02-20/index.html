@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tristan O’Malley">
-<meta name="dcterms.date" content="2023-02-07">
+<meta name="author" content="Sungmin Woo">
+<meta name="dcterms.date" content="2023-02-20">
 
-<title>Project Contrails: Journey to Cloud Computing - Welcome To My Blog</title>
+<title>Project Contrails: Journey to Cloud Computing - 동적 볼륨 프로비저닝</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,9 +113,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome To My Blog</h1>
+<h1 class="title">동적 볼륨 프로비저닝</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">news</div>
+    <div class="quarto-category">kubernetes</div>
+    <div class="quarto-category">PV</div>
+    <div class="quarto-category">PVC</div>
+    <div class="quarto-category">Dynamic Volume Provisioning</div>
   </div>
   </div>
 
@@ -126,14 +129,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Tristan O’Malley </p>
+             <p>Sungmin Woo </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 7, 2023</p>
+      <p class="date">February 20, 2023</p>
     </div>
   </div>
   
@@ -143,11 +146,27 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+<p>PV는 PVC로 요청을 받아 1대1로 결합되고, 사용된 후에는 자신의 매니페스트 파일에 정의된 회수 정책(.spec.persistentReclaimPolicy)에 따라 회수된다.</p>
+<p>회수된 PV는 재사용이 불가능하기에 개발자가 PV를 다시 요청한다면 사용했던 PV, PVC를 모두 제거한 후 재생성하여 사용해야 합니다. 이러한 정적 프로비저닝(static provisioning) 방식의 번거로움 때문에 동적 프로그래밍이 제시되었다.</p>
+<p>동적 프로비저닝은 시스템 관리자가 스토리지 기능 및 분류 정보를 담고 있는 스토리지 클래스(StorageClass) 리소스를 정의하고,<br>
+개발자가 PVC를 요청할 때 스토리지 클래스에 의해 PV가 자동으로 프로비저닝되어 사용할 수 있도록 하였다.</p>
+<section id="스토리지-클래스란" class="level5">
+<h5 class="anchored" data-anchor-id="스토리지-클래스란">스토리지 클래스란?</h5>
+<p>스토리지의 클래스(분류, 정책, 종류)에 대한 정보를 정의할 수 있는 리소스</p>
+<p>---</p>
+</section>
+<section id="reference" class="level5">
+<h5 class="anchored" data-anchor-id="reference">reference</h5>
+<ul>
+<li>[CCCR 2022 기업 멤버십 DevOPs 과정] 쿠버네티스 오케스트레이션</li>
+</ul>
+<!-- -->
+<ul>
+<li>https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
